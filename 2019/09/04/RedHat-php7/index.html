@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="ITiis">
 <meta property="og:description" content="编译PHP7123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051./configure \   --prefix=/usr/local/php \	[php安装的根目录]   --exec-prefix=/usr/local/php \	[php执行文件所在目录]">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:updated_time" content="2019-09-04T09:57:31.224Z">
+<meta property="og:updated_time" content="2019-09-04T10:00:43.946Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Redhat-php7">
 <meta name="twitter:description" content="编译PHP7123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051./configure \   --prefix=/usr/local/php \	[php安装的根目录]   --exec-prefix=/usr/local/php \	[php执行文件所在目录]">
@@ -311,8 +311,7 @@
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp /usr/<span class="built_in">local</span>/php/etc/php-fpm.d/www.conf.default /usr/<span class="built_in">local</span>/php/etc/php-fpm.d/www.conf</span><br></pre></td></tr></table></figure>
 
-<p>###Mysql的5.7版本中，用户的密码字段有所更改，请注意</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; update mysql.user <span class="built_in">set</span> authentication_string=password(<span class="string">'密码'</span>) <span class="built_in">where</span> user=<span class="string">'root'</span>;</span><br></pre></td></tr></table></figure>
+<h3 id="Mysql的5-7版本中，用户的密码字段有所更改，请注意"><a href="#Mysql的5-7版本中，用户的密码字段有所更改，请注意" class="headerlink" title="Mysql的5.7版本中，用户的密码字段有所更改，请注意"></a>Mysql的5.7版本中，用户的密码字段有所更改，请注意</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; update mysql.user <span class="built_in">set</span> authentication_string=password(<span class="string">'密码'</span>) <span class="built_in">where</span> user=<span class="string">'root'</span>;</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; flush privileges;</span><br></pre></td></tr></table></figure>
 
@@ -321,8 +320,7 @@
 <p>如果没有修改过，会出现如下字符串</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION</span><br></pre></td></tr></table></figure>
 
-<p>###配置文件my.cnf添加</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sql_mode=<span class="string">'STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'</span></span><br></pre></td></tr></table></figure>
+<h3 id="配置文件my-cnf添加"><a href="#配置文件my-cnf添加" class="headerlink" title="配置文件my.cnf添加"></a>配置文件my.cnf添加</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sql_mode=<span class="string">'STRICT_TRANS_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION'</span></span><br></pre></td></tr></table></figure>
 
 <p>mysql的5.7版本改变了一些规则，可以根据你的规则改</p>
 
@@ -471,7 +469,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#编译PHP7"><span class="nav-number">1.</span> <span class="nav-text">编译PHP7</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#编译PHP7"><span class="nav-number">1.</span> <span class="nav-text">编译PHP7</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Mysql的5-7版本中，用户的密码字段有所更改，请注意"><span class="nav-number">1.1.</span> <span class="nav-text">Mysql的5.7版本中，用户的密码字段有所更改，请注意</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置文件my-cnf添加"><span class="nav-number">1.2.</span> <span class="nav-text">配置文件my.cnf添加</span></a></li></ol></li></ol></div>
             
 
           </div>
